@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uşak Dekorasyon | UGT YAPI</title>
+<link rel="stylesheet" href="css/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">UGT YAPI</div>
+    <ul class="nav-links">
+      <li><a href="#home">Anasayfa</a></li>
+      <li><a href="#about">Hakkımızda</a></li>
+      <li><a href="#services">Hizmetler</a></li>
+      <li><a href="#products">Ürünler</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">İletişim</a></li>
+    </ul>
+    <a href="https://ugtyapi.com.tr" class="btn-main">Ana Siteye Git</a>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+  <div class="hero-text">
+    <h1 id="hero-title">Uşak Dekorasyon ile Şıklık ve Kalite</h1>
+    <p id="hero-desc">UGT YAPI'nın dekorasyon çözümleri ile evinizi baştan yaratın.</p>
+    <a href="https://ugtyapi.com.tr" class="btn-main">UGT YAPI Ana Site</a>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+  <div class="container">
+    <h2>Hakkımızda</h2>
+    <p>UGT YAPI, Uşak'ta dekorasyon ve yapı çözümleri sunan lider firmalardan biridir. İç ve dış dekorasyon, mobilya ve tadilat hizmetlerimizle evinize değer katıyoruz.</p>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+  <div class="container">
+    <h2>Hizmetlerimiz</h2>
+    <div id="services-container" class="cards"></div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="products">
+  <div class="container">
+    <h2>Ürünlerimiz</h2>
+    <div id="products-container" class="cards"></div>
+  </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="blog">
+  <div class="container">
+    <h2>Blog</h2>
+    <div id="blog-container" class="cards"></div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>İletişim</h2>
+    <form>
+      <input type="text" placeholder="Adınız" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Mesajınız" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+  </div>
+</section>
+
+<!-- Admin Panel -->
+<button id="admin-toggle" class="admin-btn">Admin Panel</button>
+<div id="admin-panel" class="admin-panel"></div>
+
+<!-- Scripts -->
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
