@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<button class="hamburger" onclick="toggleMenu()">☰</button>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Uşak Dekorasyon | UGT YAPI</title>
+<title>Uşak Dekorasyon | UGT YAPI | İç Dekorasyon, Mobilya, Tadilat</title>
+<meta name="description" content="UGT YAPI Uşak Dekorasyon çözümleri ile evinizi baştan yaratın. İç dekorasyon, dış dekorasyon, mobilya, tadilat, özel tasarım, modern ve klasik dekorasyon hizmetleri. Uşak ev dekorasyonu, ofis dekorasyonu, mutfak dekorasyonu, banyo dekorasyonu, oturma odası, salon tasarımı.">
+<meta name="keywords" content="Uşak Dekorasyon, UGT YAPI, iç dekorasyon, dış dekorasyon, mobilya, tadilat, özel tasarım, ev dekorasyonu, ofis dekorasyonu, salon dekorasyonu, mutfak dekorasyonu, banyo dekorasyonu, modern dekorasyon, klasik dekorasyon, ev tasarımı, dekorasyon hizmetleri, dekorasyon ürünleri, tasarım mobilya, iç mekan tasarımı, dekorasyon fikirleri, dekorasyon projeleri">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Uşak Dekorasyon | UGT YAPI">
+<meta property="og:description" content="UGT YAPI Uşak Dekorasyon çözümleri ile evinizi baştan yaratın. İç dekorasyon, mobilya, tadilat ve özel tasarım hizmetleri.">
+<meta property="og:image" content="images/hero1.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://usakdekorasyon.com.tr">
+
 <link rel="stylesheet" href="css/styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -13,6 +23,7 @@
 <header>
   <nav class="navbar">
     <div class="logo">UGT YAPI</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
     <ul class="nav-links">
       <li><a href="#home">Anasayfa</a></li>
       <li><a href="#about">Hakkımızda</a></li>
@@ -29,7 +40,11 @@
 <section id="home" class="hero">
   <div class="hero-text">
     <h1 id="hero-title">Uşak Dekorasyon ile Şıklık ve Kalite</h1>
-    <p id="hero-desc">UGT YAPI'nın dekorasyon çözümleri ile evinizi baştan yaratın.</p>
+    <p id="hero-desc">
+      UGT YAPI'nın Uşak Dekorasyon çözümleri ile evinizi baştan yaratın. 
+      İç dekorasyon, dış dekorasyon, mutfak ve banyo dekorasyonu, oturma odası ve salon tasarımı, ofis dekorasyonu, mobilya tasarımı ve tadilat hizmetleri sunuyoruz. 
+      Modern ve klasik dekorasyon fikirleri ile evinizin her köşesini güzelleştiriyoruz.
+    </p>
     <a href="https://ugtyapi.com.tr" class="btn-main">UGT YAPI Ana Site</a>
   </div>
 </section>
@@ -45,7 +60,11 @@
 <!-- Services Section -->
 <section id="services" class="services">
   <div class="container">
-    <h2>Hizmetlerimiz</h2>
+    <h2>Uşak Dekorasyon Hizmetlerimiz</h2>
+    <p>
+      İç dekorasyon, dış dekorasyon, mobilya tasarımı, tadilat, özel tasarım projeleri ve modern dekorasyon hizmetleri sunuyoruz. 
+      Salon, oturma odası, mutfak, banyo ve ofis dekorasyonu alanlarında uzman ekibimiz ile evinizi veya iş yerinizi baştan yaratıyoruz.
+    </p>
     <div id="services-container" class="cards"></div>
   </div>
 </section>
@@ -53,7 +72,11 @@
 <!-- Products Section -->
 <section id="products" class="products">
   <div class="container">
-    <h2>Ürünlerimiz</h2>
+    <h2>Uşak Dekorasyon Ürünlerimiz</h2>
+    <p>
+      Modern mobilyalar, özel tasarım dekorasyon ürünleri, salon takımları, yemek odası mobilyaları, mutfak dolapları, banyo aksesuarları, duvar dekorları ve dekoratif objeler ile evinizi güzelleştirin. 
+      Tüm ürünlerimiz Uşak’taki dekorasyon projelerimizle uyumlu ve yüksek kaliteli malzemelerden üretilmektedir.
+    </p>
     <div id="products-container" class="cards"></div>
   </div>
 </section>
@@ -61,7 +84,11 @@
 <!-- Blog Section -->
 <section id="blog" class="blog">
   <div class="container">
-    <h2>Blog</h2>
+    <h2>Uşak Dekorasyon Blog</h2>
+    <p>
+      Ev dekorasyonu, iç mekan tasarımı, modern ve klasik dekorasyon fikirleri, tadilat ipuçları ve dekorasyon projeleri hakkında güncel yazılar. 
+      Uşak Dekorasyon trendlerini takip edin ve evinizi yenileyin.
+    </p>
     <div id="blog-container" class="cards"></div>
   </div>
 </section>
@@ -86,5 +113,29 @@
 <!-- Scripts -->
 <script src="js/main.js"></script>
 <script src="js/admin.js"></script>
+<script>
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('show');
+}
+
+// Hero Slider
+let heroImages = [
+  'images/hero1.jpg',
+  'images/hero2.jpg',
+  'images/hero3.jpg',
+  'images/hero4.jpg',
+  'images/hero5.jpg',
+  'images/hero6.jpg'
+];
+let currentHero = 0;
+function heroSlide() {
+  document.querySelector('.hero').style.backgroundImage = `url(${heroImages[currentHero]})`;
+  currentHero = (currentHero + 1) % heroImages.length;
+}
+window.addEventListener('load', () => {
+  heroSlide();
+  setInterval(heroSlide, 5000);
+});
+</script>
 </body>
 </html>
