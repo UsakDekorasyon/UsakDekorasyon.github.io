@@ -49,3 +49,8 @@ window.addEventListener('load', () => {
   heroSlide(); // ilk yüklemede göster
   setInterval(heroSlide, 1500); // 5 saniyede bir değiştir
 });
+
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('show');
+}
+
